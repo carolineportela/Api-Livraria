@@ -6,10 +6,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 
-// const LivroModel = require('./model/LivroModel');
-// const CategoriaModel = require('./model/CategoriaModel');
-
-
 const categoriaController = require('./controller/CategoriaController');
 app.use('/', categoriaController);
 

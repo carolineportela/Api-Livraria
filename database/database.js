@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 
+//arquivo responsavel pra conectar com banco
 const connection = new Sequelize(
     'api_livraria_bd_t',
     'root',

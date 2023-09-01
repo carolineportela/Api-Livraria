@@ -4,6 +4,8 @@ const categoria = require('../model/CategoriaModel');
 
 const router = express.Router();
 
+//responsavel pelo CRUD
+
 router.post('/categoria/cadastrarCategoria', (req, res)=>{
 
     let { nome_categoria } = req.body;
@@ -81,12 +83,12 @@ router.put('/categoria/alterarCategoria', (req, res)=>{
 }
 );
 
-router.delete('/categoria/excluirCategoria/:id', (req, res)=>{
+router.delete('/categoria/excluirCategoria/:codigo_categoria', (req, res)=>{
 
-    let {id} = req.params;
+    let {codigo_categoria} = req.params;
 
     categoria.destroy(
-        {where: {id}}
+        {where: {codigo_categoria}}
     ).then(
         ()=>{
             return res.status(200).json({

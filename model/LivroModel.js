@@ -35,10 +35,10 @@ const Livro = connection.define(
     }
 );
 
-/*Implementação da  CHAVE ESTRANGEIRA - LADO N*/
+/* Implementação da  CHAVE ESTRANGEIRA - LADO N */
 Categoria.hasMany(Livro);
 
-/*Implementação da  CHAVE PRIMÁRIA - LADO 1*/
+/* Implementação da  CHAVE PRIMÁRIA - LADO 1 */
 Livro.belongsTo(Categoria);
 
 Livro.sync({force:false});

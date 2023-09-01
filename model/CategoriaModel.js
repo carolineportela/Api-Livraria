@@ -2,6 +2,8 @@ const Sequelize = require('sequelize');
 
 const connection = require('../database/database');
 
+//arquivo responsavel pra descrever as tabelas
+
 const Categoria = connection.define(
     'tbl_categoria',
     {
@@ -17,6 +19,7 @@ const Categoria = connection.define(
     }
 );
 
+//sync sincroniza a model com o banco,se a tabela nao existir o banco ira criar.
 Categoria.sync({force:false});
 
 module.exports = Categoria;
